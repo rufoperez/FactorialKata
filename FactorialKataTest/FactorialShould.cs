@@ -21,5 +21,13 @@ namespace FactorialKataTest
 
             result.Should().Be(1);
         }
+
+        [Test]
+        public void two_factorial_should_return_two()
+        {
+            var result = Factorial.GetFactorial(2);
+
+            result.Should().Be(2);
+        }
     }
 }
