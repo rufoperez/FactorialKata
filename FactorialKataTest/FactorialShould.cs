@@ -7,35 +7,15 @@ namespace FactorialKataTest
     public class FactorialShould
     {
         [Test]
-        public void zero_factorial_should_return_one()
+        [TestCase(0,1)]
+        [TestCase(1, 1)]
+        [TestCase(2, 2)]
+        [TestCase(3, 6)]
+        public void zero_factorial_should_return_one(int value, int expectedResult)
         {
-            var result = Factorial.GetFactorial(0);
+            var result = Factorial.GetFactorial(value);
             
-            result.Should().Be(1);
-        }
-
-        [Test]
-        public void one_factorial_should_return_one()
-        {
-            var result = Factorial.GetFactorial(1);
-
-            result.Should().Be(1);
-        }
-
-        [Test]
-        public void two_factorial_should_return_two()
-        {
-            var result = Factorial.GetFactorial(2);
-
-            result.Should().Be(2);
-        }
-
-        [Test]
-        public void three_factorial_should_return_six()
-        {
-            var result = Factorial.GetFactorial(3);
-
-            result.Should().Be(6);
+            result.Should().Be(expectedResult);
         }
     }
 }
