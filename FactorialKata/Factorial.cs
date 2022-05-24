@@ -2,8 +2,10 @@
 
 public class Factorial
 {
-    public static int GetFactorial(int i)
+    public static int GetFactorial(int value)
     {
-        return 1;
+        if (value < 2)
+            return 1;
+        return 2;
     }
 }
