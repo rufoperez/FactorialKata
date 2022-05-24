@@ -29,5 +29,13 @@ namespace FactorialKataTest
 
             result.Should().Be(2);
         }
+
+        [Test]
+        public void three_factorial_should_return_six()
+        {
+            var result = Factorial.GetFactorial(3);
+
+            result.Should().Be(6);
+        }
     }
 }
